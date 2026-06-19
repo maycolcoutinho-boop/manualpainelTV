@@ -354,6 +354,11 @@
               <td>Use link publico. Ideal: <code>1920x1080</code>, formato <code>jpg</code> ou <code>webp</code>.</td>
             </tr>
             <tr>
+              <td>Imagem_Posicao</td>
+              <td>Ajusta o enquadramento da imagem lateral.</td>
+              <td>Use <code>centro</code>, <code>esquerda</code>, <code>direita</code>, <code>topo</code>, <code>baixo</code> ou <code>40% center</code>.</td>
+            </tr>
+            <tr>
               <td>Vídeo</td>
               <td>Usado como midia de fundo quando preenchido.</td>
               <td>Use link direto para <code>.mp4</code>. Evite arquivos pesados.</td>
@@ -475,6 +480,26 @@
               <td>Horario em que o painel volta.</td>
               <td><code>06:00</code></td>
             </tr>
+            <tr>
+              <td>modo_descanso_dias</td>
+              <td>Dias em que a tela preta automatica funciona.</td>
+              <td><code>todos</code>, <code>dias úteis</code>, <code>fim de semana</code> ou <code>segunda,quarta,sexta</code></td>
+            </tr>
+            <tr>
+              <td>modo_descanso_mensagem</td>
+              <td>Mensagem discreta opcional na tela preta.</td>
+              <td><code>Painel em modo descanso</code></td>
+            </tr>
+            <tr>
+              <td>modo_tv_leve</td>
+              <td>Reduz efeitos visuais para navegadores de TV mais antigos.</td>
+              <td><code>Sim</code> recomendado para TV; <code>Não</code> para computadores modernos.</td>
+            </tr>
+            <tr>
+              <td>marca_rodape</td>
+              <td>Assinatura discreta no canto inferior.</td>
+              <td><code>MCOUTINHO</code></td>
+            </tr>
           </tbody>
         </table>
       </section>
@@ -488,6 +513,7 @@
         <div class="note">
           Recomendacao: use frases curtas. Exemplo:
           <code>Biblioteca digital em manutenção das 22h às 23h30.</code>
+          Marque <code>Urgente = Sim</code> apenas quando a faixa precisar de mais destaque.
         </div>
       </section>
 
@@ -497,10 +523,17 @@
           <li>Confirme se o slide esta com <code>Ativo = Sim</code>.</li>
           <li>Confira se o titulo cabe em ate 2 linhas.</li>
           <li>Use imagem horizontal <code>1920x1080</code> quando possivel.</li>
+          <li>Ajuste <code>Imagem_Posicao</code> se o rosto, produto ou informacao importante ficar cortado.</li>
           <li>Teste QR Code apontando a camera do celular.</li>
+          <li>Em televisoes antigas, mantenha <code>modo_tv_leve = Sim</code>.</li>
           <li>Se estiver editando muitos campos, coloque <code>sincronizar_painel = Não</code>.</li>
           <li>Ao finalizar, volte para <code>sincronizar_painel = Sim</code> ou use <strong>Publicar JSON</strong>.</li>
         </ol>
+        <div class="note">
+          Se a TV insistir em mostrar informacoes antigas, abra uma vez com
+          <code>?limpar_cache=1</code> no final da URL. Exemplo:
+          <code>index.html?limpar_cache=1</code>.
+        </div>
       </section>
     </main>
   </body>
